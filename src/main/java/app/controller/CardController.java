@@ -10,7 +10,7 @@ import app.inout.CardDTO;
 import app.inout.CardRequest;
 import app.service.CardService;
 
-@Path("/trello")
+@Path("/card")
 public class CardController {
 	
 	public CardService getCardService() {
@@ -20,7 +20,7 @@ public class CardController {
 	}
 
 	@POST
-	@Path("/createCard")
+	@Path("/create")
 	@Consumes({MediaType.APPLICATION_JSON})
 	@Produces({MediaType.APPLICATION_JSON})
 	public CardDTO createCard(CardRequest cardRequest) throws Exception {

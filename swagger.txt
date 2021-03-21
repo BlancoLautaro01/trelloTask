@@ -1,0 +1,28 @@
+App Base Url = http://localhost:8080/Trello/services
+
+POST: /card/create
+Expects:
+{
+    "type": String,
+    "title": String,
+    "description": String,
+    category: String
+}
+
+type: Must not be null and with this scope ["bug","issue","task"] for now.
+The other properties can be null depending on the type.
+
+Returns:
+
+{
+    "card": {
+        "type": String,
+        "title": String,
+        "description": String,
+        category: String
+    },
+    "statusCode": int
+}
+
+You can see results in the following Trello board:
+https://trello.com/b/yZUo26w9/nanboard
